@@ -1,6 +1,6 @@
 {
-  "name": "react-babel-webpack-boilerplate",
-  "version": "1.1.0",
+  "name": "emanual-forum",
+  "version": "1.0.0",
   "description": "",
   "main": "app/main.jsx",
   "scripts": {
@@ -17,7 +17,8 @@
   "dependencies": {
     "babel-runtime": "~6.2.0",
     "react": "~0.14.3",
-    "react-dom": "~0.14.3"
+    "react-dom": "~0.14.3",
+    "react-router": "^2.0.1"
   },
   "devDependencies": {
     "babel-core": "~6.2.1",
