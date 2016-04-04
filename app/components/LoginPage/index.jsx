@@ -4,14 +4,10 @@ import React from 'react';
 export default class LoginPage extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-        username: '',
-        password: ''
-    };
   }
   
   handleSubmit() {
-      let data = {
+      const data = {
           email: this.refs.email.value,
           password: this.refs.password.value
       }

@@ -4,16 +4,12 @@ import React from 'react';
 export default class RegisterPage extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-        username: ''
-    };
-    
     this.handleSubmit = this.handleSubmit.bind(this);
   }
   
   handleSubmit() {
       console.dir(this.refs.username.value)
-      let data = {
+      const data = {
           username: this.refs.username.value,
           email: this.refs.email.value,
           password: this.refs.password.value
