@@ -10,6 +10,7 @@ import QuestionPage from './components/MainPage/question';
 import LoginPage from './components/LoginPage';
 import RegisterPage from './components/RegisterPage';
 import NoMatchPage from './components/NoMatchPage';
+import QuestionDetailPage from './components/QuestionDetailPage';
 
 require('./css/weui-0.4.0.css');
 
@@ -21,7 +22,7 @@ ReactDOM.render((
       <Route path="follow" component={FollowPage}/>
       <Route path="me" component={MePage}/>
       <Route path="question" component={QuestionPage}/>
-      
+      <Route path="question/:id" component={QuestionDetailPage}/>
       <Route path="login" component={LoginPage}/>
       <Route path="register" component={RegisterPage}/>
     </Route>
