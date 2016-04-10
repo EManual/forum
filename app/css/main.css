@@ -5,4 +5,7 @@ main {
     bottom: 0;
     left: 0;
     background-color: #fbf9fe;
+    /*给出最大宽度*/
+    max-width: 600px;
+    margin: 0 auto;
 }
