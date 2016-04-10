@@ -11,6 +11,7 @@ import LoginPage from './components/LoginPage';
 import RegisterPage from './components/RegisterPage';
 import NoMatchPage from './components/NoMatchPage';
 import QuestionDetailPage from './components/QuestionDetailPage';
+import FeedbackPage from './components/FeedbackPage'
 
 require('./css/weui-0.4.0.css');
 
@@ -25,6 +26,7 @@ ReactDOM.render((
       <Route path="question/:id" component={QuestionDetailPage}/>
       <Route path="login" component={LoginPage}/>
       <Route path="register" component={RegisterPage}/>
+      <Route path="feedback" component={FeedbackPage}/>
     </Route>
     <Route path="*" component={NoMatchPage}/>
   </Router>
