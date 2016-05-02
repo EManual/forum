@@ -35,6 +35,12 @@ export default class FeedbackPage extends React.Component {
     let showToast = this.showToast
     showToast('#toast-feedback-loading',null, '提交中')
     
+    //check form 
+    if(this.state.content === ''){
+      showToast('#toast-feedback-faild', 2000, '内容不能为空')
+      return
+    }
+    
     let feedback = new FeedBack()
     feedback.set('type', this.state.type)
     feedback.set('user_contact', this.state.user_contact)
