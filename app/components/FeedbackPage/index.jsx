@@ -33,7 +33,7 @@ export default class FeedbackPage extends React.Component {
   
   submitForm (){
     let showToast = this.showToast
-    showToast('#toast-feedback-loading')
+    showToast('#toast-feedback-loading',null, '提交中')
     
     let feedback = new FeedBack()
     feedback.set('type', this.state.type)
@@ -42,20 +42,23 @@ export default class FeedbackPage extends React.Component {
     feedback.set('app_version', 'web-feedback-1.0')
     feedback.set('system_version', navigator.userAgent)
     feedback.save().then(function(feedback) {
-      showToast('#toast-feedback-success', 2000)
+      showToast('#toast-feedback-success', 2000, '已完成')
       // 成功保存之后，执行其他逻辑.
       // console.log('New object created with objectId: ' + feedback.id);
     }, function(err) {
       // 失败之后执行其他逻辑
       // error 是 AV.Error 的实例，包含有错误码和描述信息.
-      showToast('#toast-feedback-faild', 2000)
+      showToast('#toast-feedback-faild', 2000, '操作失败')
       // console.log('Failed to create new object, with error message: ' + err.message);
     });
   }
   
-  showToast(selector, timeout = 100*1000) {
+  showToast(selector, timeout, text = '已完成') {
+    timeout = timeout || 100*1000
     $('.weui_loading_toast').hide()
+    $(selector + ' p').text(text)
     $(selector).show()
+    
     setTimeout(function(){
       $(selector).hide()
     }, timeout)
