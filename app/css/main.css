@@ -9,3 +9,8 @@ main {
     max-width: 600px;
     margin: 0 auto;
 }
+
+.custom-weui_icon_clear:before {
+    color: #FFFFFF !important;
+    font-size: 40px !important;
+}
